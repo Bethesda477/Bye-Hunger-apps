@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="main-content" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.RestaurantController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" styleClass="section-title" text="All Restaurants" />
+        
+        <ScrollPane fitToHeight="true" hbarPolicy="ALWAYS" layoutX="102.0" layoutY="150.0" pannable="true" prefHeight="445.0" prefWidth="755.0" styleClass="content-scroll" vbarPolicy="NEVER" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="50.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="870.0">
+                    <children>
+                        <TilePane fx:id="restaurantTilePane" hgap="10.0" prefHeight="480.0" prefWidth="870.0" styleClass="restaurant-tile-pane" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

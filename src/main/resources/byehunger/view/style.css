@@ -1,0 +1,2006 @@
+/*!*CSS design from the root/bottom*!*/
+
+/* Root styles */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Background styles */
+.background {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Label styles */
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #333333;
+    -fx-opacity: 0.8;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #333333;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #333333;
+    -fx-opacity: 1;
+}
+
+/* Table styles */
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #e9ecef transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 8pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #495057;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #007bff;
+}
+
+/* Split pane styles */
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #e9ecef transparent #e9ecef;
+    -fx-background-color: transparent, derive(#e9ecef, 20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+/* Menu styles */
+.menu-bar {
+    -fx-background-color: derive(#ffffff, 20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#ffffff, 50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #333333;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: #ffffff;
+}
+
+/* Text field styles */
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8 12;
+}
+
+.text-field:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+/* Button styles */
+.button {
+    -fx-padding: 8 16;
+    -fx-border-color: #007bff;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-background-color: #007bff;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+    -fx-border-color: #0056b3;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #004085;
+    -fx-border-color: #004085;
+}
+
+.button:focused {
+    -fx-border-color: #0056b3;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.6;
+    -fx-background-color: #6c757d;
+    -fx-border-color: #6c757d;
+}
+
+.button:default {
+    -fx-background-color: #28a745;
+    -fx-border-color: #28a745;
+}
+
+.button:default:hover {
+    -fx-background-color: #218838;
+    -fx-border-color: #218838;
+}
+
+/* Dialog styles */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #333333;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: #f8f9fa;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-font-style: italic;
+    -fx-font-size: 2em;
+    -fx-text-fill: #333333;
+}
+
+/* Login background */
+.login-background {
+    -fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+    -fx-background-size: cover;
+}
+
+.login-background-video{
+
+}
+
+/* Thumbnail container */
+.thumbnail-container {
+    -fx-background-color: #f8f9fa;
+    -fx-background-size: cover;
+    -fx-wrap-text: true;
+    -fx-padding: 10;
+    -fx-background-radius: 8;
+}
+
+.thumbnail-container .thumbnail {
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Image view */
+.image-view {
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+
+/* Post label */
+.post-label {
+    -fx-background-color: #ffc107;
+    -fx-border-color: #00B14F;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 4 8;
+}
+
+/*profile button*/
+.profile-button {
+    -fx-background-color: #8eeaff;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.profile-button:hover {
+    -fx-background-color: #4eafc5;
+}
+
+.profile-button:pressed {
+    -fx-background-color: #4f95c4;
+}
+/* Cart button */
+.cart-button {
+    -fx-background-color: #00B14F;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.cart-button:hover {
+    -fx-background-color: #009A44;
+}
+
+.cart-button:pressed {
+    -fx-background-color: #00833A;
+}
+
+/* Main window specific styles */
+.main-window {
+    -fx-background-color: #ffffff;
+}
+
+.main-window .top-header {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.main-window .search-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.main-window .left-sidebar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 1 0 0;
+}
+
+.main-window .sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 12 16;
+    -fx-alignment: center-left;
+}
+
+.main-window .sidebar-button:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.main-window .sidebar-button:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+}
+
+/* MyPost specific styles */
+.my-post-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.my-post-container .section-title {
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 20 0;
+}
+
+.my-post-container .table-container {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.my-post-container .gallery-container {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+}
+
+/* Merchant main window specific styles */
+.merchant-main-window {
+    -fx-background-color: #ffffff;
+}
+
+.merchant-main-window .portfolio-section {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.merchant-main-window .chart-container {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+/* Login specific styles */
+.login-container {
+    -fx-background-color: transparent;
+}
+
+.login-form {
+    -fx-background-radius: 16;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.login-form .title {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+.login-form .input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 16;
+    -fx-font-size: 14pt;
+}
+
+.login-form .input-field:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.login-form .login-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+.login-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.login-form .login-button:hover {
+    -fx-background-color: #0056b3;
+}
+.firstPage-login-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 30pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.login-form .signup-link {
+    -fx-text-fill: #007bff;
+    -fx-font-size: 15pt;
+}
+
+.signup-link {
+    -fx-text-fill: #007bff;
+    -fx-font-size: 15pt;
+}
+
+.login-form .merchant-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.merchant-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.firstPage-merchant-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 30pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.merchant-button-back {
+    -fx-background-color: #ffce0f;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-border-radius: 15;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.login-form .merchant-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Scroll pane styles */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-width: 12;
+}
+
+.scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-height: 12;
+}
+
+.scroll-pane > .scroll-bar .thumb {
+    -fx-background-color: #ced4da;
+    -fx-background-radius: 6;
+}
+
+.scroll-pane > .scroll-bar .thumb:hover {
+    -fx-background-color: #adb5bd;
+}
+
+/* Tile pane styles */
+.tile-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Grid pane styles */
+.grid-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Anchor pane styles */
+.anchor-pane {
+    -fx-background-color: transparent;
+}
+
+/* VBox and HBox styles */
+.vbox, .hbox {
+    -fx-background-color: transparent;
+    -fx-spacing: 10;
+}
+
+/* Flow pane styles */
+.flow-pane {
+    -fx-background-color: transparent;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/* Post card styles */
+.post-card {
+    -fx-padding: 15;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.post-card:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 0, 4);
+}
+
+.post-restaurant-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.post-description {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+/* Category styles */
+.category-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-padding: 10;
+}
+
+.category-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 0, 4);
+}
+
+/* Button bar styles */
+.button-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.button-bar .button {
+    -fx-margin: 0 5 0 0;
+}
+
+/* Table view specific styles */
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f1f3f4;
+}
+
+/* Chart styles */
+.chart {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.chart .chart-title {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.chart .axis-label {
+    -fx-text-fill: #495057;
+    -fx-font-size: 10pt;
+}
+
+.chart .axis {
+    -fx-tick-label-fill: #6c757d;
+    -fx-tick-label-font-size: 9pt;
+}
+
+/* Additional specific styles for FXML elements */
+
+/* Top header styles */
+.top-header {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10;
+}
+
+/* Logo button */
+
+.logo-image{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-background-radius: 15;
+}
+
+.logo-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+}
+
+.logo-button:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Search bar */
+.search-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 8 16;
+}
+
+.search-bar:focused {
+    -fx-border-color: #007bff;
+    -fx-background-color: #ffffff;
+}
+
+/* Top actions */
+.top-actions {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+}
+
+/* Action button */
+.action-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.action-button:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 4;
+}
+
+/* Left sidebar */
+.left-sidebar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 10;
+}
+
+/* Sidebar button */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 12 16;
+    -fx-alignment: center-left;
+    -fx-background-radius: 4;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.sidebar-button:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+}
+
+/* Main content scroll */
+.main-content-scroll {
+    -fx-background-color: transparent;
+}
+
+/* Main content */
+.main-content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+/* Section title */
+.section-title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 15 0;
+}
+
+/* Content scroll */
+.content-scroll {
+    -fx-background-color: transparent;
+}
+
+/* Restaurant tile pane */
+.restaurant-tile-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Product tile pane */
+.product-tile-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Category grid */
+.category-grid {
+    -fx-background-color: transparent;
+    -fx-padding: 15;
+}
+
+/* Category image */
+.category-image {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.category-image:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 0, 4);
+}
+
+/* Favourite grid */
+.favourite-grid {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Favourite item */
+.favourite-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+    -fx-padding: 10;
+}
+
+/* Favourite image */
+.favourite-image {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+}
+
+/* Favourite label */
+.favourite-label {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+/* MyPost specific styles */
+.main-scroll {
+    -fx-background-color: transparent;
+}
+
+.content-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.main-content {
+    -fx-background-color: transparent;
+    -fx-spacing: 20;
+}
+
+.table-section {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.table-scroll {
+    -fx-background-color: transparent;
+}
+
+.post-table, .product-table {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.post-gallery {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+}
+
+.page-title {
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.post-button-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.add-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #28a745;
+}
+
+.add-button:hover {
+    -fx-background-color: #218838;
+    -fx-border-color: #218838;
+}
+
+.edit-button {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: #212529;
+    -fx-border-color: #ffc107;
+}
+
+.edit-button:hover {
+    -fx-background-color: #e0a800;
+    -fx-border-color: #e0a800;
+}
+
+.delete-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #dc3545;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c82333;
+    -fx-border-color: #c82333;
+}
+
+/* Merchant main window specific styles */
+.portfolio-scroll {
+    -fx-background-color: transparent;
+}
+
+.portfolio-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.portfolio-content {
+    -fx-background-color: transparent;
+    -fx-spacing: 20;
+}
+
+.portfolio-title {
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.chart-grid {
+    -fx-background-color: transparent;
+    -fx-padding: 15;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.portfolio-chart {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+/* Login specific styles */
+.login-title {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+.merchant-login-title {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+.merchant-login-h2 {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+}
+.input-section {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.input-label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.login-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 16;
+    -fx-font-size: 14pt;
+}
+
+.login-input:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.location-checkbox {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+}
+
+.action-section {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.signup-text {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+}
+
+.merchant-text {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+}
+
+/* SignUp specific styles */
+.signup-container {
+    -fx-background-color: transparent;
+}
+
+/* Cart specific styles */
+.cart-icon-popup {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 4);
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.cart-header-icon {
+    -fx-background-color: transparent;
+}
+
+.cart-header-title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.cart-items-container {
+    -fx-background-color: transparent;
+}
+
+.empty-cart-message {
+    -fx-font-size: 14pt;
+    -fx-text-fill: #999999;
+    -fx-alignment: center;
+    -fx-font-style: italic;
+}
+
+.cart-open-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+}
+
+.cart-open-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.cart-main-container {
+    -fx-background-color: #f8f9fa;
+}
+
+.cart-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 2);
+}
+
+.cart-title {
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.cart-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.cart-footer {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, -2);
+}
+
+.payment-section {
+    -fx-background-color: transparent;
+}
+
+.payment-title {
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.payment-options {
+    -fx-alignment: center-left;
+}
+
+.payment-radio {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #333333;
+}
+
+.total-pay-section {
+    -fx-alignment: center-right;
+    -fx-padding: 10 0;
+}
+
+.total-label {
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.total-amount {
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #28a745;
+}
+
+.pay-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 15 30;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.pay-button:hover {
+    -fx-background-color: #218838;
+}
+
+.signup-form {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 16;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.signup-content {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.signup-title {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+.signup-subtitle {
+    -fx-font-size: 14pt;
+    -fx-text-fill: #666666;
+    -fx-alignment: center;
+}
+
+.signup-label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.signup-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 10;
+    -fx-font-size: 10pt;
+}
+
+.signup-input:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.signup-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 12 24;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.signup-button:hover {
+    -fx-background-color: #218838;
+}
+
+.signup-decoration {
+    -fx-stroke: #e9ecef;
+    -fx-stroke-width: 2;
+}
+
+/* MerchantSignUp specific styles */
+.merchant-signup-container {
+    -fx-background-color: transparent;
+}
+
+.merchant-signup-form {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 16;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.merchant-signup-content {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.merchant-signup-title {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+.merchant-signup-subtitle {
+    -fx-font-size: 14pt;
+    -fx-text-fill: #666666;
+    -fx-alignment: center;
+}
+
+.merchant-signup-label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.merchant-signup-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 10;
+    -fx-font-size: 10pt;
+}
+
+.merchant-signup-input:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.merchant-signup-button {
+    -fx-background-color: #17a2b8;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 12 24;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.merchant-signup-button:hover {
+    -fx-background-color: #138496;
+}
+
+.merchant-signup-decoration {
+    -fx-stroke: #e9ecef;
+    -fx-stroke-width: 2;
+}
+
+/* RestaurantPost specific styles */
+.restaurant-post-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.restaurant-post-content {
+    -fx-background-color: transparent;
+}
+
+.restaurant-post-grid {
+    -fx-background-color: transparent;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.restaurant-details-scroll {
+    -fx-background-color: transparent;
+}
+
+.restaurant-details-content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.restaurant-details-flow {
+    -fx-background-color: transparent;
+    -fx-spacing: 15;
+}
+
+.restaurant-name-label {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.restaurant-description-label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+    -fx-wrap-text: true;
+}
+
+.restaurant-info-label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.restaurant-map-container {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.restaurant-map-image {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+}
+
+.restaurant-address-label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+    -fx-alignment: center;
+}
+
+.restaurant-product-list {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.restaurant-product-list-card:hover {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #253988 0.0%, #ffffff 100.0%);
+    -fx-cursor: hand;
+
+}
+
+.restaurant-image-section {
+    -fx-background-color: transparent;
+    -fx-spacing: 15;
+}
+
+.main-image-container {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+
+.restaurant-main-image {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+}
+
+.image-nav-button {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 20;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+}
+
+.image-nav-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ProductPost specific styles */
+.product-post-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.product-post-grid {
+    -fx-background-color: transparent;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.product-image-section {
+    -fx-background-color: transparent;
+}
+
+.product-image-container {
+    -fx-background-color: transparent;
+    -fx-spacing: 15;
+}
+
+.main-image-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-max-width: 300;
+    -fx-max-height: 210;
+}
+
+.product-main-image {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+}
+
+.product-thumbnail-container {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+}
+
+.product-details-scroll {
+    -fx-background-color: transparent;
+}
+
+.product-details-content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.product-name-label {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.product-description-label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+    -fx-wrap-text: true;
+}
+
+.product-price-label {
+    -fx-font-size: 22pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #28a745;
+}
+
+.product-category-label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.product-points-label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+}
+
+.product-points-value {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff;
+}
+
+.favourite-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.favourite-button:hover {
+    -fx-background-color: #c82333;
+}
+.navigation-button {
+    -fx-background-color: #3937be;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.navigation-button:hover {
+    -fx-background-color: #c82333;
+}
+.add-to-cart-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.add-to-cart-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Favourite specific styles */
+.favourite-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.favourite-page-title {
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 20 0;
+}
+
+.favourite-section-title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-padding: 0 0 15 0;
+}
+
+.favourite-restaurant-scroll {
+    -fx-background-color: transparent;
+}
+
+.favourite-restaurant-tile {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+}
+
+.favourite-food-scroll {
+    -fx-background-color: transparent;
+}
+
+.favourite-food-tile {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+}
+
+/* Form specific styles */
+.form-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.form-title {
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 20 0;
+}
+
+.form-menu-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.form-menu-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.form-grid {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+.form-label {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.form-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8 12;
+    -fx-font-size: 12pt;
+}
+
+.form-input:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.form-list-view {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.form-product-list {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.form-image-section {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.form-image-preview {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 10;
+}
+
+.form-image-controls {
+    -fx-background-color: transparent;
+    -fx-spacing: 10;
+}
+
+.form-add-image-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.form-add-image-button:hover {
+    -fx-background-color: #218838;
+}
+
+.form-drag-drop-label {
+    -fx-font-size: 10pt;
+    -fx-text-fill: #6c757d;
+    -fx-alignment: center;
+}
+
+.form-ok-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.form-ok-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* ProductForm specific styles */
+.product-form-container {
+    -fx-background-color: #ffffff;
+}
+
+.product-form-content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.product-form-vbox {
+    -fx-background-color: transparent;
+    -fx-spacing: 5;
+}
+
+.product-form-title {
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 20 0;
+}
+
+.product-form-row {
+    -fx-background-color: transparent;
+    -fx-spacing: 15;
+}
+
+.product-form-label {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-min-width: 100;
+}
+
+.product-form-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8 12;
+    -fx-font-size: 12pt;
+}
+
+.product-form-input:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.product-form-textarea {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8 12;
+    -fx-font-size: 12pt;
+}
+
+.product-form-textarea:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.25), 4, 0, 0, 0);
+}
+
+.product-form-buttons {
+    -fx-background-color: transparent;
+    -fx-spacing: 10;
+}
+
+.product-form-ok-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.product-form-ok-button:hover {
+    -fx-background-color: #218838;
+}
+
+.product-form-cancel-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.product-form-cancel-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.product-form-image-section {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.product-form-placeholder-label {
+    -fx-font-size: 33pt;
+    -fx-text-fill: rgba(0, 0, 0, 0.15);
+    -fx-alignment: center;
+}
+
+.product-form-add-image-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.product-form-add-image-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* RootLayout specific styles */
+.root-layout-container {
+    -fx-background-color: #ffffff;
+}
+
+.root-menu-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.root-menu {
+    -fx-background-color: transparent;
+}
+
+.root-menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-padding: 8 16;
+}
+
+.root-menu-item:hover {
+    -fx-background-color: #e9ecef;
+}
+
+/* About specific styles */
+.about-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.about-grid {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+.about-label {
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.about-title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.about-value {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+}
+
+.about-description {
+    -fx-font-size: 11pt;
+    -fx-text-fill: #666666;
+    -fx-wrap-text: true;
+}
+
+.about-close-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.about-close-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+/* ProductOverview specific styles */
+.product-overview-container {
+    -fx-background-color: #ffffff;
+}
+
+.product-overview-header {
+    -fx-padding: 10;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.product-overview-back-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.product-overview-back-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.product-overview-content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.product-overview-bottom {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.product-overview-strip {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.product-overview-nav-button {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 20;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+}
+
+.product-overview-nav-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* User Choice Page Styles */
+.user-choice-container {
+    /* Background removed to allow image to display properly */
+}
+
+/* FirstPage specific styles to ensure proper image display */
+.first-page-image-view {
+    -fx-background-color: transparent;
+    -fx-background-size: none;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.app-title {
+    -fx-font-size: 48pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2);
+}
+
+.app-subtitle {
+    -fx-font-size: 24pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #00000;
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+}
+
+.choice-button {
+    -fx-min-width: 300;
+    -fx-min-height: 60;
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.user-choice-button {
+    -fx-background-color: #28a745;
+    -fx-border-color: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+
+.user-choice-button:hover {
+    -fx-background-color: #218838;
+    -fx-border-color: #ffffff;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 12, 0, 0, 3);
+}
+
+.merchant-choice-button {
+    -fx-background-color: #007bff;
+    -fx-border-color: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+
+.merchant-choice-button:hover {
+    -fx-background-color: #0056b3;
+    -fx-border-color: #ffffff;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 12, 0, 0, 3);
+}
+
+.choice-description {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.9;
+    -fx-alignment: center;
+}
+
+.choice-info {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.8;
+    -fx-alignment: center;
+}
+
+/* Back Button Styles */
+.back-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    -fx-padding: 8 16;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 1);
+}
+
+.back-button:hover {
+    -fx-background-color: #5a6268;
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 0, 2);
+}

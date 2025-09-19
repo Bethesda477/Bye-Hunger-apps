@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="signup-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.SignUpController">
+   <children>
+      <GridPane layoutX="-162.0" prefHeight="400.0" prefWidth="762.0" styleClass="signup-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-116.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.33331298828125" minWidth="10.0" prefWidth="264.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.3333740234375" minWidth="10.0" prefWidth="336.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView disable="true" fitHeight="401.0" fitWidth="685.0" opacity="0.41" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/signup2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="417.0" prefWidth="314.0" styleClass="signup-content" GridPane.columnIndex="1">
+               <children>
+                  <Box depth="100" drawMode="LINE" height="210.0" layoutX="168.0" layoutY="217.0" styleClass="signup-decoration" width="295.0" />
+                  <Label layoutX="30.0" layoutY="125.0" styleClass="signup-label" text="User ID: " />
+                  <Text layoutX="23.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="signup-title" text="Bye Hunger 👋" textAlignment="CENTER">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="23.0" layoutY="76.0" prefHeight="27.0" prefWidth="290.0" styleClass="signup-subtitle" text="Sign Up to find your nearby discounted food!" wrapText="true" />
+                  <Label layoutX="27.0" layoutY="172.0" styleClass="signup-label" text="Password: " />
+                  <TextField fx:id="usernameField" layoutX="125.0" layoutY="119.0" prefHeight="39.0" prefWidth="177.0" promptText="user id" styleClass="signup-input" />
+                  <TextField fx:id="emailField" layoutX="124.0" layoutY="268.0" promptText="byehunger@email.com" styleClass="signup-input" />
+                  <Label layoutX="34.0" layoutY="274.0" styleClass="signup-label" text="Email: " />
+                  <Button fx:id="signUpButton" layoutX="193.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleSignUp" styleClass="signup-button" text="Sign Up" />
+                  <PasswordField fx:id="passwordField" layoutX="125.0" layoutY="167.0" prefHeight="27.0" prefWidth="177.0" promptText="password" styleClass="signup-input" />
+                  <Label layoutX="30.0" layoutY="207.0" prefHeight="57.0" prefWidth="98.0" styleClass="signup-label" text="Confirm Password: " wrapText="true" />
+                  <PasswordField fx:id="confirmPasswordField" layoutX="125.0" layoutY="217.0" prefHeight="27.0" prefWidth="177.0" promptText="password" styleClass="signup-input" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

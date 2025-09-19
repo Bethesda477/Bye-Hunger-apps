@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="640.0" prefWidth="1150.0" styleClass="root-layout-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.RootLayoutController">
+   <top>
+      <MenuBar styleClass="root-menu-bar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu styleClass="root-menu" text="_File">
+            <items>
+              <MenuItem onAction="#handleClose" styleClass="root-menu-item" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="ESCAPE" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" styleClass="root-menu" text="_Help">
+            <items>
+              <MenuItem onAction="#handleAbout" styleClass="root-menu-item" text="About">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="SLASH" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="SLASH" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

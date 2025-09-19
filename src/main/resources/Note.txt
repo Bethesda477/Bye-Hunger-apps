@@ -1,0 +1,31 @@
+What so special about StringProperty?
+-publisher(data) & subscriber(require data)
+-stringProperty can become subscriber or publisher of each other
+
+val aString = new StringProperty("Ali")
+val bString = new StringProperty("Mutu")
+
+- <== unidirection (v: ObservableValue[_
+bString <== aString ; aString data flow to bString
+bString become Ali (aString); bString subscribe to aString
+cannot set value for bString because bString is subscribed to a publisher
+ eg: bString.value = "Ahchong" //wrong error
+
+<==> bidirectional
+bString <==> aString
+if aStirng.value = "KL" at last ; aStirng, bString = "KL"
+if bStirng.value = "KK" at last ; aStirng, bString = "KK"
+
+Dont use new because we are not calling constructor, just companion object
+- if that companion object has function like apply, copy, toString, equals, hashCode, unapply and only using these method
+ -> use companion object without new
+ -> why? because if use new , will call the constructor and it might need to parse in parameter, very tedious
+
+2nd usage of stringProperty: Bind to a function
+val add = (a: Int, b: Int) => {a + b}
+or
+val add = (a: Int, b: Int) =>
+    a + b
+val add: (Int, Int) => Int = (a: Int, b: Int) =>  //after add type for add: (Int, Int) => Int
+    a + b
+

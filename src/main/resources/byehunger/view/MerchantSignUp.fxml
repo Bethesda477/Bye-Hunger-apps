@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="452.0" prefWidth="573.0" styleClass="merchant-signup-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.MerchantSignUpController">
+   <children>
+      <GridPane layoutX="-112.66666666666667" prefHeight="400.0" prefWidth="648.0" styleClass="merchant-signup-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-113.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="193.3333740234375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.66669209798175" minWidth="10.0" prefWidth="326.6666259765625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView disable="true" fitHeight="454.0" fitWidth="649.0" opacity="0.74" pickOnBounds="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../images/merchant.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="376.0" prefWidth="323.0" styleClass="merchant-signup-content" GridPane.columnIndex="2">
+               <children>
+                  <Box depth="100" drawMode="LINE" height="270.0" layoutX="200.0" layoutY="250.0" styleClass="merchant-signup-decoration" width="345.0" />
+                  <Label layoutX="41.0" layoutY="138.0" styleClass="merchant-signup-label" text="Merchant ID: " />
+                  <Text layoutX="56.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="merchant-signup-title" text="Bye Hunger 👋" textAlignment="CENTER">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="91.0" layoutY="79.0" styleClass="merchant-signup-subtitle" text="Sign Up as our merchant!" />
+                  <Label layoutX="45.0" layoutY="281.0" prefHeight="65.0" prefWidth="84.0" styleClass="merchant-signup-label" text="Company Name:" wrapText="true" />
+                  <Label layoutX="42.0" layoutY="191.0" styleClass="merchant-signup-label" text="Password: " />
+                  <TextField fx:id="usernameField" layoutX="171.0" layoutY="130.0" prefHeight="39.0" prefWidth="199.0" styleClass="merchant-signup-input" stylesheets="@style.css" />
+                  <TextField fx:id="businessNameField" layoutX="168.0" layoutY="293.0" prefHeight="39.0" prefWidth="199.0" styleClass="merchant-signup-input" />
+                  <PasswordField fx:id="passwordField" layoutX="170.0" layoutY="185.0" prefHeight="44.0" prefWidth="199.0" styleClass="merchant-signup-input" />
+                  <Label layoutX="43.0" layoutY="343.0" styleClass="merchant-signup-label" text="Email: " />
+                  <TextField fx:id="emailField" layoutX="169.0" layoutY="337.0" prefHeight="39.0" prefWidth="199.0" styleClass="merchant-signup-input" />
+                  <Button fx:id="merchantSignUpButton" layoutX="124.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleMerchantSignUp" styleClass="merchant-signup-button" text="Sign up as a merchant" />
+                  <Label graphicTextGap="0.0" layoutX="41.0" layoutY="230.0" prefHeight="64.0" prefWidth="113.0" styleClass="merchant-signup-label" text="Confirm Password: " wrapText="true" />
+                  <PasswordField fx:id="confirmPasswordField" layoutX="168.0" layoutY="241.0" prefHeight="44.0" prefWidth="199.0" styleClass="merchant-signup-input" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

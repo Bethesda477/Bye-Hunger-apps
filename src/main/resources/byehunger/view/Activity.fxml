@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Arc?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.ActivityController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="200.0" prefWidth="564.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="What's Hot in Town" />
+            <ScrollPane layoutX="5.0" layoutY="39.0" prefHeight="148.0" prefWidth="553.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="644.0">
+                     <children>
+                        <ImageView fitHeight="123.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/heart.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="125.0" fitWidth="204.0" layoutX="153.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="226.0" prefHeight="160.0" prefWidth="564.0">
+         <children>
+            <Label layoutY="5.0" text="I think I can lend a hand for you" />
+            <ScrollPane layoutX="14.0" layoutY="31.0" prefHeight="136.0" prefWidth="553.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="644.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="18.0" layoutY="428.0" prefHeight="200.0" prefWidth="553.0">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Your help matters" />
+            <Arc fill="#ffaaa4" layoutX="178.0" layoutY="123.0" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="389.0" prefWidth="493.0" styleClass="product-form-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.ProductFormController">
+   <center>
+      <AnchorPane prefHeight="328.0" prefWidth="485.0" styleClass="product-form-content">
+      
+          <children>
+              <VBox alignment="TOP_LEFT" styleClass="product-form-vbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      
+                  <!-- Title -->
+                  <Label styleClass="product-form-title" text="Add Product" />
+      
+                  <!-- Product Name -->
+                  <HBox alignment="CENTER_LEFT" spacing="10" styleClass="product-form-row">
+                      <Label minWidth="100" styleClass="product-form-label" text="Product Name:" />
+                      <TextField fx:id="productNameField" promptText="Enter product name" styleClass="product-form-input" />
+                  </HBox>
+      
+                  <!-- Price -->
+                  <HBox alignment="CENTER_LEFT" spacing="10" styleClass="product-form-row">
+                      <Label minWidth="100" styleClass="product-form-label" text="Price:" />
+                      <TextField fx:id="priceField" promptText="Enter price" styleClass="product-form-input" />
+                  </HBox>
+      
+                                    <!-- Description -->
+                  <HBox alignment="CENTER_LEFT" spacing="10" styleClass="product-form-row">
+                      <Label alignment="TOP_LEFT" minWidth="100" styleClass="product-form-label" text="Description:" />
+                      <TextArea fx:id="productDescriptionField" prefHeight="15.0" prefRowCount="3" prefWidth="356.0" promptText="Enter description" styleClass="product-form-textarea" />
+                  </HBox>
+
+                  <!-- Categories -->
+                  <HBox alignment="CENTER_LEFT" spacing="10" styleClass="product-form-row">
+                      <Label minWidth="100" styleClass="product-form-label" text="Categories:" />
+                      <FlowPane fx:id="categoriesContainer" prefHeight="120.0" prefWidth="350.0" styleClass="product-form-categories" />
+                  </HBox>
+
+                  <!-- Buttons -->
+                  <HBox alignment="CENTER_RIGHT" styleClass="product-form-buttons">
+                      <Button fx:id="okButton" onAction="#handleOk" styleClass="product-form-ok-button" text="OK" />
+                      <Button fx:id="cancelButton" onAction="#handleCancel" styleClass="product-form-cancel-button" text="Cancel" />
+                  </HBox>
+               <HBox fx:id="imagePreviewPane" alignment="CENTER" prefHeight="130.0" prefWidth="453.0" spacing="5.0" styleClass="product-form-image-section">
+                  <children>
+                     <Label fx:id="placeholderLabel" contentDisplay="CENTER" styleClass="product-form-placeholder-label" text="Drag the Image Here" textAlignment="CENTER">
+                        <font>
+                           <Font size="33.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="addImageButton" mnemonicParsing="false" onAction="#handleAddImage" prefHeight="38.0" prefWidth="257.0" styleClass="product-form-add-image-button" text="Add Image" />
+                  </children>
+                  <VBox.margin>
+                     <Insets top="15.0" />
+                  </VBox.margin>
+               </HBox>
+              </VBox>
+          </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

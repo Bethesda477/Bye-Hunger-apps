@@ -1,0 +1,9 @@
+Post, restaurantPost, activityPost, is inheritance of association
+
+how to import image into code
+
+class Post(val postTitle: String, val writerName: String, val postPhotos:  String, val priceS: ObservableBuffer[Double]): //???Double??? //extends Database
+  def this() = this(null, null, null, null) //ask???
+
+
+How to make scroll pane auto add new column if new message/ post added???

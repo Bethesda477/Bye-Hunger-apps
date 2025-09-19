@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane prefHeight="581.0" prefWidth="785.0" styleClass="restaurant-post-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.RestaurantPostController">
+   <children>
+      <StackPane fx:id="contentContainer" layoutX="40.0" layoutY="40.0" prefHeight="563.0" prefWidth="732.0" styleClass="restaurant-post-content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="productContent" visible="false" />
+            <GridPane fx:id="restaurantContent" prefHeight="489.0" prefWidth="654.0" styleClass="restaurant-post-grid">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="328.2222493489583" minWidth="10.0" percentWidth="65.0" prefWidth="283.77773030598956" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="390.88893636067706" minWidth="10.0" percentWidth="75.0" prefWidth="382.88893636067706" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ScrollPane prefHeight="447.0" prefWidth="421.0" styleClass="restaurant-details-scroll" GridPane.columnIndex="1">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="939.0" prefWidth="364.0" styleClass="restaurant-details-content">
+                           <children>
+                              <FlowPane hgap="300.0" layoutY="21.0" prefHeight="510.0" prefWidth="332.0" styleClass="restaurant-details-flow" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0">
+                                 <children>
+                                    <Label fx:id="restaurantNameLabel" prefHeight="17.0" prefWidth="313.0" styleClass="restaurant-name-label" text="Restaurant Name">
+                                       <textFill>
+                                          <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.14368095993995667" green="0.2219623178243637" blue="0.5350877046585083" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </RadialGradient>
+                                       </textFill></Label>
+                                    <Label fx:id="restaurantDescriptionLabel" prefHeight="31.0" prefWidth="317.0" styleClass="restaurant-description-label" text="Restaurant Description Field" wrapText="true" />
+                                    <Label styleClass="restaurant-info-label" text="Categories" />
+                                    <FlowPane fx:id="categoriesContainer" hgap="5.0" prefHeight="50.0" prefWidth="300.0" styleClass="restaurant-categories" vgap="5.0" />
+                                    <Label styleClass="restaurant-info-label" text="Operation Day" />
+                                    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="49.0" prefWidth="349.0" styleClass="restaurant-map-container">
+                                       <children>
+                                          <Label fx:id="addressLabel" prefHeight="63.0" prefWidth="275.0" />
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="232.0" styleClass="restaurant-address-label" text="Address" textAlignment="CENTER" />
+                                       </children>
+                                    </FlowPane>
+                                    <Label styleClass="restaurant-info-label" text="Phone No." />
+                                    <Label styleClass="restaurant-info-label" text="Product" />
+                                    <VBox fx:id="productList" prefHeight="200.0" prefWidth="329.0" styleClass="restaurant-product-list" />
+                                 </children>
+                              </FlowPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <VBox prefHeight="477.0" prefWidth="271.0" spacing="10.0" styleClass="restaurant-image-section">
+                     <children>
+                        <AnchorPane prefHeight="337.0" prefWidth="154.0" styleClass="main-image-container">
+                           <children>
+                              <ImageView fx:id="mainImageView" fitHeight="303.0" fitWidth="292.0" layoutX="22.666666666666668" layoutY="22.666666666666668" pickOnBounds="true" styleClass="restaurant-main-image" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="11.0" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="buttonLeft" layoutX="14.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleLeft" styleClass="image-nav-button" text="⬅" />
+                              <Button fx:id="buttonRight" contentDisplay="RIGHT" layoutX="256.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleRight" styleClass="image-nav-button" text="➡" />
+                           </children>
+                        </AnchorPane>
+                        <HBox id="thumbnail-container" fx:id="thumbnailContainer" prefHeight="104.0" prefWidth="340.0" spacing="5.0" styleClass="thumbnail-container" />
+                        <HBox alignment="TOP_CENTER" prefHeight="65.0" prefWidth="337.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="favouriteButton" mnemonicParsing="false" onAction="#handleFavourite" styleClass="favourite-button" text="Favourite" />
+                              <Button fx:id="navigateButton" mnemonicParsing="false" onAction="#handleNavigation" styleClass="navigation-button" text="Navigate" textFill="#3937be" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

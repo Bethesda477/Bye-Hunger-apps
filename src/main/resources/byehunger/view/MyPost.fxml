@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="714.0" prefWidth="974.0" styleClass="my-post-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.MyPostController">
+   <children>
+      <ScrollPane prefHeight="520.0" prefWidth="688.0" styleClass="main-scroll" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="901.0" prefWidth="907.0" styleClass="content-container">
+               <children>
+                  <VBox layoutX="14.0" layoutY="73.0" prefHeight="604.0" prefWidth="940.0" spacing="30.0" styleClass="main-content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <HBox spacing="15.0" styleClass="table-section">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" styleClass="table-scroll">
+                                 <content>
+                                    <TableView fx:id="postTable" prefHeight="249.0" prefWidth="383.0" styleClass="post-table">
+                                      <columns>
+                                        <TableColumn fx:id="postIDColumn" prefWidth="122.66665649414062" text="PostID" />
+                                        <TableColumn fx:id="nameColumn" minWidth="0.0" prefWidth="170.66668701171875" text="Name" />
+                                          <TableColumn fx:id="dateOfCreatedColumn" prefWidth="83.3333740234375" text="Date" />
+                                      </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane hbarPolicy="NEVER" styleClass="table-scroll">
+                                 <content>
+                                    <TableView fx:id="productTable" prefHeight="249.0" prefWidth="511.0" styleClass="product-table">
+                                       <columns>
+                                          <TableColumn fx:id="productIDColumn" prefWidth="114.66671752929688" text="Product PostID" />
+                                          <TableColumn fx:id="productNameColumn" minWidth="0.0" prefWidth="170.66661834716797" text="Product Name" />
+                                          <TableColumn fx:id="productDateColumn" prefWidth="80.66668701171875" text="Date" />
+                                          <TableColumn fx:id="productRestaurantColumn" prefWidth="143.33336385091144" text="Restaurant" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <TilePane fx:id="postGallery" alignment="CENTER" hgap="20.0" prefHeight="391.0" prefTileHeight="200.0" prefTileWidth="180.0" prefWidth="940.0" styleClass="post-gallery" vgap="20.0" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="14.0" layoutY="-10.0" styleClass="page-title" text="My Post" />
+                  <ButtonBar layoutX="-8.0" layoutY="40.0" styleClass="post-button-bar">
+                     <buttons>
+                        <Button fx:id="addPostButton" mnemonicParsing="false" onAction="#handleAdd" styleClass="add-button" text="Add Post +" />
+                        <Button mnemonicParsing="false" onAction="#handleEdit" styleClass="edit-button" text="Edit Post" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDelete" styleClass="delete-button" text="Delete Post" />
+                     </buttons>
+                  </ButtonBar>
+                  <ButtonBar layoutX="403.0" layoutY="41.0">
+                     <buttons>
+                        <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#handleAddProduct" styleClass="add-button" text="Add Product" />
+                        <Button fx:id="editProductButton" mnemonicParsing="false" onAction="#handleEditProduct" styleClass="edit-button" text="Edit Product" />
+                        <Button fx:id="deleteProductButton" mnemonicParsing="false" onAction="#handleDeleteProduct" styleClass="delete-button" text="Delete Product" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

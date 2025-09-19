@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="582.0" prefWidth="645.0" styleClass="form-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.FormController">
+   <children>
+      <ListView layoutX="12.0" layoutY="57.0" prefHeight="481.0" prefWidth="644.0" styleClass="form-list-view" />
+      <Label layoutX="24.0" layoutY="16.0" prefHeight="59.0" prefWidth="230.0" styleClass="form-title" text="Create New Post" />
+      <GridPane layoutX="2.0" layoutY="57.0" prefHeight="521.0" prefWidth="669.0" styleClass="form-grid">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.6666259765625" minWidth="10.0" prefWidth="189.99998982747397" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.66667683919263" minWidth="10.0" prefWidth="420.66667683919263" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.333343505859375" minHeight="10.0" prefHeight="30.333328247070312" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="97.66667175292969" minHeight="10.0" prefHeight="75.77774047851562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.55558268229169" minHeight="0.0" prefHeight="55.777791341145814" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.5555419921875" minHeight="10.0" prefHeight="48.4444580078125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.333333333333314" minHeight="0.0" prefHeight="41.888916015625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="91.77775065104169" minHeight="0.0" prefHeight="91.77775065104169" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="restaurantNameField" styleClass="form-input" GridPane.columnIndex="1" />
+            <TextField fx:id="operationDayField" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="restaurantDescriptionField" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="addressURL" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="contactNumberField" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label styleClass="form-label" text="Contact Number" GridPane.rowIndex="5" />
+            <Label styleClass="form-label" text="Operation Day" GridPane.rowIndex="1" />
+            <Label styleClass="form-label" text="Restaurant Image" GridPane.rowIndex="2" />
+            <Label styleClass="form-label" text="Restaurant Description" GridPane.rowIndex="3" />
+            <Label styleClass="form-label" text="Address" GridPane.rowIndex="4" />
+            <Label styleClass="form-label" text="Restaurant Name" />
+            <Label styleClass="form-label" text="Categories" GridPane.rowIndex="6" />
+            <HBox fx:id="ensureAddressUrlColumn" prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="433.0" styleClass="form-image-section" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <HBox fx:id="imagePreviewPane" prefHeight="105.0" prefWidth="274.0" styleClass="form-image-preview" />
+                  <VBox prefHeight="68.0" prefWidth="126.0" styleClass="form-image-controls">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAddImage" prefHeight="38.0" prefWidth="126.0" styleClass="form-add-image-button" text="Add Image" />
+                        <Label styleClass="form-drag-drop-label" text="Or Drag and Drop the image here" wrapText="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <FlowPane fx:id="categoriesContainer" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="okButton" layoutX="418.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleOk" styleClass="form-ok-button" text="Ok" />
+   </children>
+</AnchorPane>

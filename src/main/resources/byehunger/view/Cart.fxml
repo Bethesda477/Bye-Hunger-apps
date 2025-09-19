@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="cart-main-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byehunger.view.CartController">
+   <top>
+      <HBox spacing="15" styleClass="cart-header" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" styleClass="cart-header-icon">
+                <image>
+                    <Image url="/images/cart.png" />
+                </image>
+            </ImageView>
+            <Label text="Shopping Cart" styleClass="cart-title" />
+         </children>
+      </HBox>
+   </top>
+   
+   <center>
+      <ScrollPane prefHeight="300.0" prefWidth="580.0" styleClass="cart-scroll-pane" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="580.0">
+               <children>
+                  <VBox fx:id="cartContainer" prefHeight="300.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0" styleClass="cart-items-container" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+   
+   <bottom>
+      <VBox spacing="20" styleClass="cart-footer" BorderPane.alignment="CENTER">
+         <children>
+            <!-- Payment Method Section -->
+            <VBox spacing="10" styleClass="payment-section">
+               <children>
+                  <Label text="Payment Method" styleClass="payment-title" />
+                  <HBox spacing="20" styleClass="payment-options">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Touch n Go" styleClass="payment-radio" />
+                        <RadioButton mnemonicParsing="false" text="Bank Transfer" styleClass="payment-radio" />
+                        <RadioButton mnemonicParsing="false" text="Credit / Debit Card" styleClass="payment-radio" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <!-- Total and Pay Section -->
+            <HBox spacing="20" styleClass="total-pay-section">
+               <children>
+                  <Label text="Total: " styleClass="total-label" />
+                  <Label fx:id="totalLabel" text="RM0.00" styleClass="total-amount" />
+                  <Button fx:id="payButton" mnemonicParsing="false" onAction="#handlePay" text="Pay Now" styleClass="pay-button" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
